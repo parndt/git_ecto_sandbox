@@ -35,4 +35,4 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :git_ecto_sandbox, GitEctoSandbox.Repo,
   adapter: GitEcto.Adapter,
-  path: "/Users/parndt/code/elixir/phoenix"
+  path: "./"

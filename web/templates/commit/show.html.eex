@@ -1,0 +1,11 @@
+<h2>Show commit <%= @commit.sha %></h2>
+
+<table>
+  <tr><th>Author</th><td><%= @commit.author %></td></tr>
+  <tr><th>Date</th><td><%= @commit.date %></td></tr>
+  <tr><th>Message</th><td><%= @commit.message %></td></tr>
+</table>
+
+  <pre><code class="diff"><%= @commit.patch %></code></pre>
+
+<%= link "Back", to: commit_path(@conn, :index) %>

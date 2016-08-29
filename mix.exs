@@ -19,7 +19,7 @@ defmodule GitEctoSandbox.Mixfile do
   def application do
     [mod: {GitEctoSandbox, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto]]#, :git_ecto]]
+                    :phoenix_ecto, :git_ecto]]
   end
 
   # Specifies which paths to compile per environment.

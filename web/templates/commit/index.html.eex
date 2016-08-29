@@ -1,0 +1,22 @@
+<h2>Listing commits</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>SHA</th>
+      <th>Author</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for commit <- @commits do %>
+    <tr>
+      <td><%= link commit.commit, to: commit_path(@conn, :show, commit.commit) %></td>
+      <td><%= commit.author %></td>
+      <td><%= commit.message %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New commit", to: commit_path(@conn, :new) %>
